@@ -1,0 +1,10 @@
+---
+layout: default
+---
+<p>Hi, I'm Stephen. Welcome to my lil' old website.</p>
+
+<p>Below, you'll find some writeups about projects I've worked on and the problems I encountered while doing so. Hopefully you find 'em useful!</p>
+
+{%- for post in site.categories.articles %}
+<p>{{ post.date | date: '%F' }} &mdash; <a href="{{ post.url }}">{{ post.title }}</a></p>
+{%- endfor %}

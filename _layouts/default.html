@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang='{{ page.lang | default: "en" }}'>
+
+<head>
+  <title>
+  {%- if page.title -%}
+    {{ site.title }} &mdash; {{ page.title }}
+  {%- else -%}
+    {{ site.title }} &mdash; {{ site.description }}
+  {%- endif -%}
+  </title>
+
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" type="text/css">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {%- if site.google_analytics and jekyll.environment == 'production' -%}
+    {%- include analytics.html -%}
+  {%- endif -%}
+</head>
+
+<body>
+  <header>
+    <h1><img style="vertical-align: bottom;" src="{{ site.url }}/assets/images/logo.png"> {{ site.title }}</h1>
+    <nav>
+      <a href="{{ site.url }}/">home</a> |
+      <a href="{{ site.url }}/journal/">journal</a> |
+      <a href="{{ site.url }}/about.html">about</a>
+    </nav>
+    <hr>
+  </header>
+
+  <main style="max-width: 80em; font-size: 14px;">
+    {{ content }}
+  </main>
+</body>
+
+</html>
