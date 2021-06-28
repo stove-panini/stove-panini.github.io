@@ -2,5 +2,10 @@
 layout: default
 ---
 <h1>{{ page.title }}</h1>
+<small>Posted on {{ page.date | date: "%B %e, %Y" }}</small>
 
 {{ content }}
+
+<section class="end">
+  <p>&mdash; <a href="mailto:stephen@trashnet.xyz" target="_blank">stephen@trashnet.xyz</a></p>
+</section>

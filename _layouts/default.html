@@ -10,7 +10,9 @@
   {%- endif -%}
   </title>
 
+  <link rel="stylesheet" href="{{ '/assets/css/normalize.css' | relative_url }}" type="text/css">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" type="text/css">
+  <link rel="stylesheet" href="{{ '/assets/css/syntax.css' | relative_url }}" type="text/css">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
 
@@ -33,7 +35,7 @@
     <hr>
   </header>
 
-  <main style="max-width: 80em; font-size: 14px;">
+  <main>
     {{ content }}
   </main>
 </body>
