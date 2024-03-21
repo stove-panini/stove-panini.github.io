@@ -1,0 +1,189 @@
+@font-face {
+  font-family: "EB Garamond";
+  font-weight: 400;
+  src: url("/assets/fonts/EBGaramond-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "EB Garamond";
+  font-weight: 700;
+  src: url("/assets/fonts/EBGaramond-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "EB Garamond";
+  font-weight: 400;
+  font-style: italic;
+  src: url("/assets/fonts/EBGaramond-Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "EB Garamond";
+  font-weight: 700;
+  font-style: italic;
+  src: url("/assets/fonts/EBGaramond-BoldItalic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "EB Garamond";
+  font-weight: 800;
+  font-style: italic;
+  src: url("/assets/fonts/EBGaramond-ExtraBoldItalic.woff2") format("woff2");
+}
+
+/* ---- Flex Layout -------------------------------------------------------- */
+div.container {
+  display: flex;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+div.side {
+  flex: 1;
+}
+
+div.content {
+  flex: 1;
+  /* ensures that long content doesn't widen this div */
+  max-width: 100%;
+}
+
+@media screen and (width <= 500px) {
+  /* collapse side columns on small screens */
+  div.side {
+    flex: 0;
+  }
+}
+
+/* ---- Default elements --------------------------------------------------- */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "EB Garamond";
+}
+
+header, footer {
+  margin: 2rem;
+  border-color: black;
+  border-width: thin;
+}
+
+main {
+  font-size: 1.25rem;
+  padding: 1rem;
+}
+
+a:link {
+  color: red;
+}
+
+a:visited {
+  color: darkred;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 0.5rem;
+  border: black thin solid;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1 { /* Markdown title */
+  margin-bottom: 0;
+}
+
+h6 { /* Markdown date (my convention) */
+  margin: 0.5rem;
+  font-weight: normal;
+}
+
+
+code { /* Markdown inline and fenced code text */
+  color: darkslategray;
+  background-color: whitesmoke;
+  font-size: 0.8rem;
+}
+
+pre { /* Markdown fenced code box */
+  background-color: whitesmoke;
+  border: 1px solid silver;
+  padding: 1rem;
+  overflow-x: scroll;
+}
+
+/* ---- Custom elements ---------------------------------------------------- */
+div.logo {
+  font-weight: 800;
+  font-style: italic;
+  letter-spacing: -0.098em;
+  text-align: center;
+}
+
+/* ---- Index styling ------------------------------------------------------ */
+div.index div.logo {
+  font-size: clamp(2rem, 20vw, 10rem);
+}
+
+div.index nav {
+  text-align: center;
+}
+
+div.index nav a:link, div.index nav a:visited, div.index nav a:hover {
+  color: black;
+}
+
+div.index table {
+  table-layout: fixed;
+  width: clamp(20px, 90vw, 500px);
+  margin: auto;
+}
+
+div.index td {
+  border-style: dotted none dotted none;
+  border-width: medium;
+  border-color: black;
+}
+
+td.posts-date {
+  text-align: right;
+  width: min-content;
+}
+
+td.posts-title {
+  text-align: left;
+}
+
+/* ---- Post styling ------------------------------------------------------- */
+div.post div.logo {
+  font-size: clamp(2rem, 10vw, 3rem);
+}
+
+div.post main {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+div.post header {
+  border-bottom-style: solid;
+  margin-bottom: 0;
+  /* allows header to take up full width of screen */
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
+
+div.post footer {
+  border-top-style: solid;
+}
+
+div.post header a:link, div.post header a:visited, div.post header a:hover {
+  color: black;
+  text-decoration: none;
+}
