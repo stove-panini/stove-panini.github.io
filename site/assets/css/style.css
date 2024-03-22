@@ -188,7 +188,7 @@ div.post main {
 /* On larger screens, keep the minimum width ~80ch but use a nicer unit */
 @media screen and (width >= 640px) {
   div.post main {
-    min-width: 37rem;
+    min-width: 38rem;
   }
 }
 
