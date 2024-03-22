@@ -49,10 +49,9 @@ div.content {
   max-width: 100%;
 }
 
-@media screen and (width <= 500px) {
-  /* collapse side columns on small screens */
-  div.side {
-    flex: 0;
+@media screen and (width <= 640px) {
+  div.side { /* collapse side columns on small screens */
+    flex: none;
   }
 }
 
@@ -169,11 +168,6 @@ div.post div.logo {
   font-size: clamp(2rem, 10vw, 3rem);
 }
 
-div.post main {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
 div.post header {
   border-bottom-style: solid;
   margin-bottom: 0;
@@ -182,11 +176,22 @@ div.post header {
   margin-right: calc(-50vw + 50%);
 }
 
-div.post footer {
-  border-top-style: solid;
-}
-
 div.post header a:link, div.post header a:visited, div.post header a:hover {
   color: black;
   text-decoration: none;
+}
+
+div.post main {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+/* On larger screens, keep the minimum width ~80ch but use a nicer unit */
+@media screen and (width >= 640px) {
+  div.post main {
+    min-width: 37rem;
+  }
+}
+
+div.post footer {
+  border-top-style: solid;
 }
