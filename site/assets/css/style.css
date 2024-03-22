@@ -94,6 +94,9 @@ th, td {
 img {
   max-width: 100%;
   height: auto;
+  /* center 'em */
+  display: block;
+  margin: auto;
 }
 
 h1 { /* Markdown title */
@@ -148,7 +151,7 @@ div.index table {
 
 div.index td {
   border-style: dotted none dotted none;
-  border-width: medium;
+  border-width: 2px;
   border-color: black;
 }
 
