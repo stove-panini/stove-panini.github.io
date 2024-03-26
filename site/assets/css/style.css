@@ -43,9 +43,7 @@ div.side {
   flex: 1;
 }
 
-div.content {
-  flex: 1;
-  /* ensures that long content doesn't widen this div */
+div.content { /* ensures that long content doesn't widen this div */
   max-width: 100%;
 }
 
@@ -97,16 +95,6 @@ img {
   display: block;
   margin: auto;
 }
-
-h1 { /* Markdown title */
-  margin-bottom: 0;
-}
-
-h6 { /* Markdown date (my convention) */
-  margin: 0.5rem 0 0.5rem 0;
-  font-weight: normal;
-}
-
 
 code { /* Markdown inline and fenced code text */
   color: darkslategray;
@@ -185,11 +173,24 @@ div.post main {
   padding-left: 1rem;
   padding-right: 1rem;
 }
-/* On larger screens, keep the minimum width ~80ch but use a nicer unit */
+/* On larger screens, keep the width ~80ch but use a nicer unit */
 @media screen and (width >= 640px) {
   div.post main {
-    min-width: 38rem;
+    width: 38rem;
   }
+}
+
+div.post h1 { /* Title */
+  margin-bottom: 0;
+}
+
+div.post h5 { /* Date */
+  margin-top: 0;
+  font-weight: normal;
+}
+
+div.post h6 { /* Tags (parsed by build script, not yet implemented) */
+  visibility: collapse;
 }
 
 div.post footer {

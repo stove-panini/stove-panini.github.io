@@ -1,6 +1,6 @@
 Welcome to the Internet
 =======================
-###### 2024-03-21
+##### 2024-03-21
 
 ![Under construction](/assets/images/haharrisonandconstruct.gif)
 
@@ -13,3 +13,5 @@ I started out with a "no layout" approach, approximating a no-frills, readable, 
 Now that that's out of the way, I plan to use this website as a general purpose journal.
 
 A WEB LOG, IF YOU WILL.
+
+###### journal
