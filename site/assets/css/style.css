@@ -62,7 +62,7 @@ html, body {
 
 header, footer {
   margin: 2rem;
-  border-color: black;
+  border-color: Black;
   border-width: thin;
 }
 
@@ -85,7 +85,7 @@ table {
 
 th, td {
   padding: 0.5rem;
-  border: black thin solid;
+  border: Black thin solid;
 }
 
 img {
@@ -96,15 +96,20 @@ img {
   margin: auto;
 }
 
+img + em { /* Image captions */
+  font-size: 0.9rem;
+  color: DimGray;
+}
+
 code { /* Markdown inline and fenced code text */
-  color: darkslategray;
-  background-color: whitesmoke;
+  color: DimGray;
+  background-color: WhiteSmoke;
   font-size: 0.8rem;
 }
 
 pre { /* Markdown fenced code box */
-  background-color: whitesmoke;
-  border: 1px solid silver;
+  background-color: WhiteSmoke;
+  border: 1px solid LightGray;
   padding: 1rem;
   overflow-x: scroll;
 }
@@ -127,7 +132,7 @@ div.index nav {
 }
 
 div.index nav a:link, div.index nav a:visited, div.index nav a:hover {
-  color: black;
+  color: Black;
 }
 
 div.index table {
@@ -139,7 +144,7 @@ div.index table {
 div.index td {
   border-style: dotted none dotted none;
   border-width: 2px;
-  border-color: black;
+  border-color: Black;
 }
 
 td.posts-date {
@@ -165,7 +170,7 @@ div.post header {
 }
 
 div.post header a:link, div.post header a:visited, div.post header a:hover {
-  color: black;
+  color: Black;
   text-decoration: none;
 }
 
@@ -176,7 +181,7 @@ div.post main {
 /* On larger screens, keep the width ~80ch but use a nicer unit */
 @media screen and (width >= 640px) {
   div.post main {
-    width: 38rem;
+    width: 40rem;
   }
 }
 
