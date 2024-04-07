@@ -2,7 +2,7 @@ Welcome to the Internet
 =======================
 ##### 2024-03-21
 
-![Under construction](/assets/images/haharrisonandconstruct.gif)
+![Under construction](haharrisonandconstruct.gif)
 
 Okay, so the website is finally deployed in earnest. I remember using GitHub Pages a few years ago and building it with the default choice of Jekyll and having an okay time. This time around, however, I chose to roll my own static site builder via a combination of [lowdown](https://kristaps.bsd.lv/lowdown/) and trusty old Bash. The repo is [here](https://github.com/stove-panini/stove-panini.github.io).
 

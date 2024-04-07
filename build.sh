@@ -14,21 +14,18 @@ unsorted_posts=()
 
 # Generate the posts and the posts list
 for post in site/posts/*.md; do
-    # Trim trailing .md
-    post_no_ext="${post%.md}"
-    post_basename=$(basename "$post_no_ext")
-
-    # Trim after first underscore
-    date="${post_basename%%_*}"
-
+    name=$(basename "${post%.md}") # Trim path and .md extension
+    date="${name%%_*}" # Trim after first underscore
     title="$(head -n 1 "$post")"
 
     __CONTENT__=$(lowdown --html-no-skiphtml --html-no-escapehtml "$post")
     export __CONTENT__
 
-    envsubst <templates/post.html >"${post_no_ext}.html"
+    post_dir="site/posts/${name}"
+    [[ ! -d "$post_dir" ]] && mkdir "$post_dir"
+    envsubst <templates/post.html >"${post_dir}/index.html"
 
-    unsorted_posts+=("<tr><td class=\"posts-date\">${date}</td><td class=\"posts-title\"><a href=\"posts/${post_basename}.html\">${title}</a></td></tr>")
+    unsorted_posts+=("<tr><td class=\"posts-date\">${date}</td><td class=\"posts-title\"><a href=\"posts/${name}/\">${title}</a></td></tr>")
 done
 
 # Sort the posts into $__POSTS__
